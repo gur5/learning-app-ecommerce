@@ -41,8 +41,10 @@ sudo systemctl status mariadb
 2. Configure firewall for Database
 
 ```
+sudo firewall-cmd --list-all # check firewall rules
 sudo firewall-cmd --permanent --zone=public --add-port=3306/tcp
 sudo firewall-cmd --reload
+sudo firewall-cmd --list-all # again chk firewall rules
 ```
 
 3. Configure Database
