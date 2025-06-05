@@ -35,6 +35,7 @@ sudo vi /etc/my.cnf
 
 sudo systemctl start mariadb
 sudo systemctl enable mariadb
+sudo systemctl status mariadb
 ```
 
 2. Configure firewall for Database
