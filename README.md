@@ -22,6 +22,17 @@ sudo systemctl status firewalld
 ```
 sudo yum install -y mariadb-server
 sudo vi /etc/my.cnf
+
+    [mysqld]
+    datadir=/var/lib/mysql
+    socket=/var/lib/mysql/mysql.sock
+    symbolic-link=0
+    
+    [mysqld_safe]
+    log-error=/var/log/mariadb/mariadb.log
+    pid-file=/var/run/mariadb/mariadb.pid
+    !includedir /etc/my.cnf.d
+
 sudo systemctl start mariadb
 sudo systemctl enable mariadb
 ```
